@@ -252,17 +252,16 @@ header {
 /* HEADER-ABOUT */
 .headerabout-inner {
   position: relative;
-  padding: 240px 0 120px;
+  margin: 240px 0 120px;
 }
 
 .headerabout-inner::after {
   content: "";
   position: absolute;
-  display: inline-block;
   width: 200px;
   height: 200px;
   background: url(../img/about-hero-circle.svg) no-repeat;
-  bottom: 0;
+  bottom: -120px;
   right: -265px;
 }
 
