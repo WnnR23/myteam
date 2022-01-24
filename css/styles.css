@@ -761,3 +761,143 @@ footer {
   mix-blend-mode: normal;
   opacity: 0.6;
 }
+
+/* CONTACTUS */
+.contactus {
+  margin: 240px 0 120px;
+  position: relative;
+}
+
+.contactus::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: url(../img/directors-circle.svg) no-repeat;
+  top: 0;
+  left: -265px;
+}
+
+.contactus::after {
+  content: "";
+  position: absolute;
+  width: 358px;
+  height: 200px;
+  background: url(../img/hero-circle-red.svg) no-repeat;
+  transform: rotateY(180deg);
+  bottom: -120px;
+  right: -400px;
+}
+
+.contactus-inner {
+  width: 540px;
+  height: auto;
+}
+
+.contactus-head {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 100px;
+  color: var(--white);
+}
+
+.contactus-ask {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: bold;
+  color: var(--light-coral);
+}
+
+.contactus-ask-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contactus-ask-list-items {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.contactus-ask-list-item-article {
+  margin: 0;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.contactus-ask-list-items:nth-child(1) .contactus-ask-list-item-article::before {
+  content: "";
+  width: 72px;
+  height: 72px;
+  margin-right: 23px;
+  background: url(../img/icon-circle-man.svg) no-repeat;
+}
+
+.contactus-ask-list-items:nth-child(2) .contactus-ask-list-item-article::before {
+  content: "";
+  width: 72px;
+  height: 72px;
+  margin-right: 23px;
+  background: url(../img/icon-circle-check-cog.svg) no-repeat;
+}
+
+.contactus-ask-list-items:nth-child(3) .contactus-ask-list-item-article::before {
+  content: "";
+  width: 72px;
+  height: 72px;
+  margin-right: 23px;
+  background: url(../img/icon-circle-line-chart.svg) no-repeat;
+}
+
+.contactus-input {
+  width: 540px;
+}
+
+#name, #email, #company-name, #title, #message {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0 81px 17px 14px;
+  width: 100%;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.1154px;
+  background-color: var(--midnight-green);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#message {
+  padding: 0 81px 59px 14px;
+  resize: vertical;
+}
+
+#name:hover, #email:hover, #company-name:hover, #title:hover, #message:hover {
+  border-color: var(--rapture-blue);
+}
+
+#submit-btn {
+  margin: 0;
+  padding: 7px 30px 9px;
+  background: var(--white);
+  border: 2px solid var(--white);
+  box-sizing: border-box;
+  border-radius: 24px;
+  color: #004047;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background: var(--light-coral);
+  border-color: var(--light-coral);
+  opacity: 0.8;
+}
+
+#submit-btn:active {
+  background: var(--rapture-blue);
+  opacity: 0.4;
+}
