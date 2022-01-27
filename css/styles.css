@@ -151,19 +151,28 @@ header {
 }
 
 .header-nav {
+  margin: 0;
+  padding: 0;
   flex-grow: 1;
-  padding-left: 80px;
+  list-style: none;
+  margin-left: 80px;
+}
+
+.header-nav-links-wrap {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+
+}
+
+.header-nav-links-wrap:first-child {
+  margin-right: 40px;
 }
 
 .header-nav-links {
   text-decoration: none;
   text-transform: lowercase;
   color: var(--white);
-  margin-right: 40px;
-}
-
-.header-nav-links:last-child {
-  margin: 0;
 }
 
 .header-nav-links:hover {
@@ -708,7 +717,9 @@ footer {
 }
 
 .footer-nav {
+  margin: 0;
   margin-top: 25px;
+  flex-grow: 0;
 }
 
 .footer-meta {
