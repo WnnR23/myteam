@@ -8,6 +8,7 @@
   --deep-jungle-green: #004047;
   --state-green: #012F34;
   --dark-green: #002529;
+  --about-active: #002529;
 }
 
 /* FONTS */
@@ -589,14 +590,42 @@ main {
   margin-bottom: 76px;
   position: relative;
   width: 350px;
-  height: auto;
-  padding: 32px 48px 56px;
-  background: var(--state-green);
-  text-align: center;
+  height: 260px;
+  perspective: 1000px;
 }
 
-.mainabout-list-items::after {
-  content: "";
+.mainabout-list-items-default {
+  padding: 32px 48px 56px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: var(--state-green);
+  backface-visibility: hidden;
+  transition: 0.5s;
+}
+
+.mainabout-list-items-active {
+  padding: 32px 48px 56px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: var(--about-active);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: 0.5s;
+}
+
+.rotate-180 {
+  transform: rotateY(-180deg);
+}
+
+.rotate0 {
+  transform: rotateY(0deg);
+}
+
+.card-btn {
   width: 56px;
   height: 56px;
   position: absolute;
@@ -604,13 +633,24 @@ main {
   background-position: center center;
   background-color: var(--light-coral);
   border-radius: 50%;
+  border: none;
   bottom: -28px;
   left: calc(50% - 28px);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.mainabout-list-items:last-child:after {
+.card-btn:hover {
+  background-color: var(--rapture-blue);
+}
+
+.card-btn-active {
   background-color: var(--rapture-blue);
   transform: rotateZ(45deg);
+}
+
+.card-btn-active:hover {
+  background-color: var(--light-coral);
 }
 
 .mainabout-list-items-article-writer-picture {
